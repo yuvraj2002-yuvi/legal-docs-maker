@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../contexts/LanguageContext";
+import logoImg from "../assets/logo.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -58,13 +59,11 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-9 h-9 rounded-xl blue-gradient flex items-center justify-center shadow-lg group-hover:shadow-blue-500/40 transition-shadow duration-300">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" fill="white" opacity="0.9"/>
-                  <path d="M14 2v6h6" fill="none" stroke="white" strokeWidth="1.5" opacity="0.5"/>
-                  <path d="M8 13h8M8 17h5" stroke="#93c5fd" strokeWidth="1.5" strokeLinecap="round"/>
-                </svg>
-              </div>
+              <img
+                src={logoImg}
+                alt="Legal Docs Maker Logo"
+                className="w-10 h-10 rounded-xl object-contain shadow-lg shadow-blue-900/30 group-hover:scale-105 transition-transform duration-300"
+              />
               <div>
                 <span className="font-display font-bold text-white text-lg leading-none tracking-tight">
                   Legal Docs

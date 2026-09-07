@@ -35,8 +35,8 @@ function H2({ children }: { children: React.ReactNode }) {
 function H3({ children }: { children: React.ReactNode }) {
   return <h3 className="font-semibold text-blue-200 mt-6 mb-2">{children}</h3>;
 }
-function P({ children }: { children: React.ReactNode }) {
-  return <p className="text-blue-200/70 leading-relaxed">{children}</p>;
+function P({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+  return <p className={`text-blue-200/70 leading-relaxed ${className}`}>{children}</p>;
 }
 function Li({ children }: { children: React.ReactNode }) {
   return <li className="text-blue-200/70">{children}</li>;

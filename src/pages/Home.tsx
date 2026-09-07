@@ -5,6 +5,7 @@ import { courts, searchDocuments, type Document } from "../data/documents";
 import { useCounter } from "../hooks/useScrollReveal";
 import { useLanguage } from "../contexts/LanguageContext";
 import { hindiCategoryNames, hindiCourtNames } from "../data/documents";
+import logoImg from "../assets/logo.png";
 
 /* ─── Animated counter ─── */
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
@@ -132,11 +133,7 @@ function Hero() {
               <div className="glass rounded-3xl p-6 w-72 sm:w-80 shadow-2xl shadow-black/40 border border-blue-500/20">
                 {/* Header bar */}
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-9 h-9 rounded-xl blue-gradient flex items-center justify-center">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="white" opacity="0.9">
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
-                    </svg>
-                  </div>
+                  <img src={logoImg} alt="Legal Docs Maker Logo" className="w-9 h-9 rounded-xl object-contain shadow-md shrink-0" />
                   <div>
                     <div className="text-white font-semibold text-sm font-display">Legal Docs Maker</div>
                     <div className="text-blue-400 text-xs">{t("selectDocument")}</div>
@@ -809,7 +806,7 @@ function AppDownload() {
                     </div>
                     <div className="flex-1 p-3 space-y-2">
                       <div className="flex items-center gap-2 bg-blue-900/30 rounded-xl p-2.5">
-                        <div className="w-6 h-6 rounded-lg blue-gradient" />
+                        <img src={logoImg} alt="App Logo" className="w-6 h-6 rounded-lg object-contain shrink-0" />
                         <div>
                           <div className="h-1.5 w-20 bg-blue-300/30 rounded mb-1" />
                           <div className="h-1 w-14 bg-blue-500/20 rounded" />
