@@ -138,6 +138,9 @@
 # ---------------------------------------------------------------------------
 *.dwg                filter=lfs diff=lfs merge=lfs -text
 *.dxf                filter=lfs diff=lfs merge=lfs -text
+
+# Keep web PNG assets available to static hosts as regular binary files.
+*.png                -filter -diff -merge -text
 *.step               filter=lfs diff=lfs merge=lfs -text
 *.stp                filter=lfs diff=lfs merge=lfs -text
 *.iges               filter=lfs diff=lfs merge=lfs -text
