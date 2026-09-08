@@ -6,7 +6,7 @@ import path from 'node:path'
 const isVercel = process.env.VERCEL === '1'
 
 export default defineConfig({
-  base: isVercel ? '/' : '/legal-docs-maker/',
+  base: isVercel ? '/' : './',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
