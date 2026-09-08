@@ -33,7 +33,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <BrowserRouter basename="/legal-docs-maker">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <LanguageProvider>
         <ScrollToTop />
         <div className="min-h-full flex flex-col bg-[#020818]">

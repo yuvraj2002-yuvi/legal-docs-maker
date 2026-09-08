@@ -3,8 +3,10 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'node:path'
 
+const isVercel = process.env.VERCEL === '1'
+
 export default defineConfig({
-  base: '/legal-docs-maker/',
+  base: isVercel ? '/' : '/legal-docs-maker/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
