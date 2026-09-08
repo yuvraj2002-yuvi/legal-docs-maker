@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=./#/" />
+    <title>Redirecting...</title>
+    <script>
+      (() => {
+        const repoBase = "/legal-docs-maker";
+        const currentPath = window.location.pathname;
+        const pathAfterRepo = currentPath.startsWith(repoBase)
+          ? currentPath.slice(repoBase.length)
+          : currentPath;
+        const safePath = pathAfterRepo && pathAfterRepo !== "/" ? pathAfterRepo : "/";
+        const redirectUrl = `${repoBase}/#${safePath}`;
+        window.location.replace(redirectUrl);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>

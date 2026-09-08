@@ -4,9 +4,10 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'node:path'
 
 const isVercel = process.env.VERCEL === '1'
+const isGithubActions = process.env.GITHUB_ACTIONS === 'true'
 
 export default defineConfig({
-  base: isVercel ? '/' : './',
+  base: isVercel ? '/' : isGithubActions ? '/legal-docs-maker/' : './',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
